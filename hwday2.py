@@ -82,4 +82,13 @@
 
 #6 Celsius to Fahrenheit
 
-C = int(input("Whats the temperature in Celsius? "))
+# Celsius = (input("Whats the temperature in Celsius? "))
+# print(str(int(Celsius) * (9/5) + 32) + "F")
+
+
+#7 Looping from 1 to 10
+
+count = 0
+while count < 10:
+    count += 1
+    print(count)
