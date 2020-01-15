@@ -145,7 +145,7 @@
 # service = input("Level of service? i.e. good, fair, bad: ")
 # bill_amount = float(bill_amount)
 # split = (input("Slpit how many ways? "))
-# split = float(split)
+# split = int(split)
 
 # if service == "good" :
 #     print("Tip amount: " + str(bill_amount * 0.20))
@@ -155,12 +155,12 @@
 # elif service == "fair" :
 #     print("Tip amount: " + str(bill_amount * 0.15))
 #     print("Total amount: " + str((bill_amount * 0.15) + bill_amount))
-#     print("Amount per person: " + str(((bill_amount * 0.20) + bill_amount) / split))
+#     print("Amount per person: " + str(((bill_amount * 0.15) + bill_amount) / split))
 
 # elif service == "bad" :
 #     print("Tip amount: " + str(bill_amount * 0.10))
 #     print("Total amount: " + str((bill_amount * 0.10) + bill_amount))
-#     print("Amount per person: " + str(((bill_amount * 0.20) + bill_amount) / split))
+#     print("Amount per person: " + str(((bill_amount * 0.10) + bill_amount) / split))
 
 # else:
 #     print("INVALID!!!")
@@ -203,10 +203,10 @@
 
 #6 Multiplication Table
 
-for i in range(1, 11):
-    for n in range(1, 11):
-        result = i * n
-        print(str(i) + " " + "X" + " " + str(n) + "=" + str(result))
+# for i in range(1, 11):
+#     for n in range(1, 11):
+#         result = i * n
+#         print(str(i) + " " + "X" + " " + str(n) + "=" + str(result))
 
 
 
