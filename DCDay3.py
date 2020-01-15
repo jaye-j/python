@@ -128,9 +128,9 @@
 
 
 
-for o_index in range(1, 11) :
-    for i_index in range(1, 11) :
-        print(str(o_index) + " X " + str(i_index) + " = " + str(o_index * i_index))
+# for o_index in range(1, 11) :
+#     for i_index in range(1, 11) :
+#         print(str(o_index) + " X " + str(i_index) + " = " + str(o_index * i_index))
 
 
 
