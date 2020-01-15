@@ -107,39 +107,30 @@
 
 # print(myList)
 # print(newList)
-#
+
+
+# my_string = "Hello World"
+
+# print(my_string[1:]) #prints "ello World"
+
+# print(list(range(2, 100, 2)))
+
+# name = "Jacob"
+
+# for letter in name :
+#     print(letter)
+
+# for  index in range(10) :
+#     print(index)
+
+# for index in range(1, 1002, 2) :
+#     print(index)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+for o_index in range(1, 11) :
+    for i_index in range(1, 11) :
+        print(str(o_index) + " X " + str(i_index) + " = " + str(o_index * i_index))
 
 
 
