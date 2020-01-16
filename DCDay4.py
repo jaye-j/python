@@ -81,9 +81,12 @@
 # print(result)
 # print(cal_avg(6, 8, 22, 11))
 
-def cal_avg(num):
-    avg = sum(num) / len(num)
-    return avg
+# def cal_avg(num):
+#     avg = sum(num) / len(num)
+#     return avg
 
-print("The average is ", cal_avg([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+# print("The average is ", cal_avg([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+
+
+
 
