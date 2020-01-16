@@ -160,19 +160,19 @@
 
 #6 Long Vowels
 
-word = input("Please enter a word: ")
-converted_word = list(word.lower())
-long_word = []
+# word = input("Please enter a word: ")
+# converted_word = list(word.lower())
+# long_word = []
 
-long_vowels = {"a" : "aaa", "e" : "eee", "i" : "iii", "o" : "ooo", "u" : "uuu"}
-for letter in converted_word:
-    if letter in long_vowels:
-        letter = long_vowels[letter]
-        long_word.append(letter)
-    else:
-        long_word.append(letter)
-result = "".join(long_word)
-print(result)
+# long_vowels = {"a" : "aaa", "e" : "eee", "i" : "iii", "o" : "ooo", "u" : "uuu"}
+# for letter in converted_word:
+#     if letter in long_vowels:
+#         letter = long_vowels[letter]
+#         long_word.append(letter)
+#     else:
+#         long_word.append(letter)
+# result = "".join(long_word)
+# print(result)
 
 
 #7 Caesar Cipher
