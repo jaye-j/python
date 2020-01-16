@@ -51,8 +51,26 @@
 
 #6 only_evens
 
+# def only_evens(list_of_numbers):
+#     even_numbers = []
+#     for i in list_of_numbers:
+#         if (i % 2) == 0:
+#             even_numbers.append(i)
+#     return(even_numbers)
+
+# print(only_evens([23, 454, 32, 35, 122, 334, 5]))
+
+
 #7 only_odds
 
+def only_odds(list_of_numbers):
+    odd_numbers = []
+    for i in list_of_numbers:
+        if (i % 2) != 0:
+            odd_numbers.append(i)
+    return(odd_numbers)
+
+print(only_odds([23, 454, 32, 35, 122, 334, 5]))
 
 # Medium
 
