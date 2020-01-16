@@ -96,20 +96,19 @@
 
 #2 Matrix Addition
 
-# dim1 = [[2, 4], [3, 5]]
-# dim2 = [[3, 7], [8, 3]]
-# results = []
-
-# for d1_index in range(len(dim1)) :
-#     for d2_index in range(len(dim2)) :
-#         if d1_index == d2_index:
+# dim1 = [[2, -2], [5, 3]]
+# dim2 = [[2, -2], [5, 3]]
+# result_list = []
+# for index1 in range(len(dim1)):
+#     for index2 in range(len(dim2)):
+#         if index1 == index2:
 #             working_list = []
-#             sum1 = dim1[d1_index][0] + dim2[d2_index][0]
-#             sum2 = dim1[d1_index][1] + dim2[d2_index][1]
+#             sum1 = dim1[index1][0] + dim2[index2][0]
+#             sum2 = dim1[index1][1] + dim2[index2][1]
 #             working_list.append(sum1)
 #             working_list.append(sum2)
-#             results.append(working_list)
-# print(results)
+#             result_list.append(working_list)
+# print(result_list)
 
 #3 Matrix Addition II
 
