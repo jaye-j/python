@@ -162,3 +162,71 @@
 
 # print(f'Sonny\'s contact info: {sonny.email}, {sonny.phone}')
 # print(f'Jordan\'s contact info: {jordan.email}, {jordan.phone}')
+
+# class Person:
+#   def __init__ (self, name):
+#     self.name = name
+#     self.count = 0
+
+#   def greet (self):
+#     self._greet()
+
+#   def _greet (self):
+#     self.count += 1
+#     if self.count > 1:
+#       print("Stop being so nice")
+#       self.__reset_count()
+#     else:
+#       print("Hello", self.name)
+
+#   def __reset_count(self):
+#     self.count = 0
+
+# alex = Person("alex")
+# alex._greet()
+# alex._greet()
+# alex._greet()
+
+# class Animal:
+#     def __init__ (self, name):
+#         self.name = name
+# class Dog (Animal):
+#     def woof (self):
+#         print("Woof")
+# class Cat (Animal):
+#     def meow (self):
+#         print("Meow")
+
+# class JString(str):
+
+#     def reverse(self, name):
+#         rstring = ""
+
+#         for char in name:
+#             rstring = char + rstring
+
+#         return rstring
+
+# myString = JString("hello")
+# print(myString.capitalize())
+
+# reversed = myString.reverse("hello")
+
+# print(reversed)
+
+# *******************************************
+
+# class Character:
+#     def __init__(self, name, power, health):
+#         self.name = name
+#         self.power = power
+#         self.health = health
+
+# class Hero(Character):
+#     def __init__(self, weapon, name, power, health):
+#         self.weapon = weapon
+#         super(Hero, self).__init__(name, power, health)
+
+# jaye = Hero("Excalibur", "Sir Jaye", 80, 100)
+
+# print(jaye.name)
