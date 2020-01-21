@@ -43,8 +43,9 @@
 
 # for letters in user_input:
 #     if letters not in empty_dict:
-#         empty_dict[letters] = 0
-#     empty_dict[letters] += 1
+#         empty_dict[letters] = 1
+#     else:
+#         empty_dict[letters] = empty_dict[letters] + 1
 # print(empty_dict)
 
 
