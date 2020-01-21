@@ -1,68 +1,59 @@
-# class Person: 
-#     def __init__(self, name, email, phone):
-#         self.name = name
-#         self.email = email
-#         self.phone = phone
-#     def greet(self, other_person):
-#         print('Hello {}, I am {}!'.format(other_person.name, self.name))
+class Person: 
+    def __init__(self, name, email, phone):
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.friends = []
+        self.greeting_count = 0
 
-# sonny = Person("Sonny", "sonny@hotmail.com", "483-485-4948")
-# jordan = Person("Jordan", "jordan@aol.com", "495-586-3456")
+    def greet(self, other_person):
+        print('Hello {}, I am {}!'.format(other_person.name, self.name))
+        self.greeting_count += 1
+    
+    def print_contact_info(self):
+        print(f'{self.name}\'s email: {self.email}, {self.name}\'s phone number: {self.phone}')
 
-# sonny.greet(jordan)
-# jordan.greet(sonny)
+    def add_friend(self, friend_name):
+        self.friends.append(friend_name)
 
-# print(f'Sonny\'s contact info: {sonny.email}, {sonny.phone}')
-# print(f'Jordan\'s contact info: {jordan.email}, {jordan.phone}')
+    def num_friends(self):
+        print(f'{self.name} has {len(self.friends)} friend(s).')
 
-# class Person:
-#   def __init__ (self, name):
-#     self.name = name
-#     self.count = 0
+    def __str__(self):
+        return "Person: {} {} {}".format(self.name, self.email, self.phone)
 
-#   def greet (self):
-#     self._greet()
 
-#   def _greet (self):
-#     self.count += 1
-#     if self.count > 1:
-#       print("Stop being so nice")
-#       self.__reset_count()
-#     else:
-#       print("Hello", self.name)
 
-#   def __reset_count(self):
-#     self.count = 0
+sonny = Person("Sonny", "sonny@hotmail.com", "483-485-4948")
+jordan = Person("Jordan", "jordan@aol.com", "495-586-3456")
 
-# alex = Person("alex")
-# alex._greet()
-# alex._greet()
-# alex._greet()
+sonny.greet(jordan)
+jordan.greet(sonny)
+sonny.add_friend('Joe')
+print(f'Sonny\'s contact info: {sonny.email}, {sonny.phone}')
+print(f'Jordan\'s contact info: {jordan.email}, {jordan.phone}')
+sonny.print_contact_info()
+sonny.friends.append(jordan)
+jordan.friends.append(sonny)
+print(f'{jordan.name} has {len(jordan.friends)} friend(s).')
+sonny.num_friends()
 
-# class Animal:
-#     def __init__ (self, name):
-#         self.name = name
-# class Dog (Animal):
-#     def woof (self):
-#         print("Woof")
-# class Cat (Animal):
-#     def meow (self):
-#         print("Meow")
+sonny.greet(jordan)
+print(sonny.greeting_count)
+print(sonny)
 
-class JString(str):
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
 
-    def reverse(self, name):
-        rstring = ""
+    def print_info(self):
+        print(self.make, self.model, self.year)
+    
 
-        for char in name:
-            rstring = char + rstring
+car = Vehicle('Mazda', 'Mazda3', 2011)
+print(car.make, car.model, car.year)
+car.print_info()
 
-        return rstring
-
-myString = JString("hello")
-print(myString.capitalize())
-
-reversed = myString.reverse("hello")
-
-print(reversed)
 
