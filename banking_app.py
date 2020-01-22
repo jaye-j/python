@@ -25,20 +25,65 @@ class Bank:
 
     def showMembers(self):
         for accounts in self.accounts:
-            print(f"{accounts.fname} {accounts.mname} {accounts.lname}")
+            print(f"{accounts.fname} {accounts.mname} {accounts.lname}\'s account balance is {accounts.balance}'")
 
-    def transferFunds(self, account, amount):
+    def transferFunds(self, your_account, recipient_account, amount):
+        for accounts in self.accounts:
+            if accounts.fname == your_account:
+                accounts.balance -= amount
+                if accounts.balance < 0:
+                    accounts.balance -= 35
+        for accounts in self.accounts:
+            if accounts.fname == recipient_account:
+                accounts.balance += amount
+
+    def withdrawFunds(self, account_to_withdraw, withdraw_amount):
+        for accounts in self.accounts:
+            if accounts.fname == account_to_withdraw:
+                accounts.balance -= withdraw_amount
+                if accounts.balance < 0:
+                    accounts.balance -= 35
     
 def main():
     Big_Boy_Banking = Bank("Big Boy Banking LLC", "69420 Road St.")
     action = 1
 
     while action != 6:
+        print("""@@@@%/*****************************************************************************************/&@@@
+@**************************************************************************************************/
+***********************/%//(#***********************************************************************
+*********************&        .******************************,,*************************************
+******************,%@%.      ,.(*******                ****      ***********************************
+***************& &             (********      ,***      ,**     ,***********************************
+**************(   @@@&&@@@@#&(.@*******       ***       ******.********,.,**,,,,********************
+**************(  @@#@@@@@@@#/#&(******.              ***       ****     **     .********************
+*************& ,, %@@  ./@&,&#@&(*****      ***      ****     .**     .**.     *********************
+************** &@&*@@@@&@@&@@(@@#****      .****      **      **      ***     **********************
+**************&%(@@@@@@@@%*(@@%(****       ****       *      **,     ***     ,**********************
+****************(%%%(/@@@@&&%%****..       ..        **       **            .***********************
+************%%@@@@@@. %@@@@..@***************************.,***********,     ************************
+*********#@@@%@@@@@@@  (*#/@  @@/(*******               ,*****     **     ,*************************
+******%#@@@@@(/(&@@@@ * ##%@   @@%(*******      ***,      *****,      .*****************************
+****#%@@@@((*%%,@. ,/ @%#@#@#/%@@&(******       ***       ******************************************
+****/##&%/*% @*&#@ (&  *#   &@#@@#,*****.      ,,       ****      .    ***.      ***     ***********
+***********&     @(,@@* *@@  ##&@#,*****      **      ****      ***.    .**,     **     .***********
+***********/&(/@(    //  ,@(***//******      .***,      *      ****      *,     ***     ************
+*************& .%@@@@@@(*(************       ****       *     ,***      **     ***     *************
+***********& &%*,@, *  ,*/***********,      ***,       **,    ***     .**.            ,*************
+**********@   @@,  @@. &***********,..............,*********.      ,*******   .*,     **************
+********/  ,##.  @@%#***************************************************    ,**,    .***************
+*********# *  /*********************************************************,        .***,**************
+***********((**,,***********************************************************************************
+****************************************************************************************************
+@***************************************************************************************************
+@@#***********************************************************************************************&@\n""")
+        print("WELCOME TO BIG BOY BANKING LLC ONLINE:")
         print(f"""What would you like to do at your friendly neighborhood {Big_Boy_Banking.name}?""")
-        print("1. Create an account")
+        print("1. Create an account. ")
         print(f"2. Show a list of all {Big_Boy_Banking.name} account holders. ")
-        print{f"3. Transfer funds. "}
-        print("6. Exit Big Boy Banking.")
+        print("3. Transfer funds. ")
+        print("4. Withdraw funds. ")
+        print("6. Exit Big Boy Banking. ")
 
         action = int(input(">>>"))
 
@@ -55,10 +100,19 @@ def main():
             Big_Boy_Banking.showMembers()
 
         elif (action == 3):
-            Big_Boy_Banking.transferFunds()
+            your_account = input("What is the first name for your account? ")
+            recipient_account = input("Who do you want to transfer money to? ")
+            amount = int(input("How much would you like to transfer? "))
+            Big_Boy_Banking.transferFunds(your_account, recipient_account, amount)
+
+        elif (action == 4):
+            account_to_withdraw = input("What is the first name for your account? ")
+            withdraw_amount = int(input("How much would you like to withdraw from your account? "))
+            Big_Boy_Banking.withdrawFunds(account_to_withdraw, withdraw_amount)
+            print(f"You withdrew ${withdraw_amount} from {account_to_withdraw}. ")
 
         if (action == 6):
-            print("See you soon. We'll miss you dearly while you're away...")
+            print("See you soon! We'll miss you dearly while you're away... Please comeback soon to Big Boy Banking LLC. Where your moneys safety is our top priority!")
             break
         
 
