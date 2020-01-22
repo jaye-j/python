@@ -27,7 +27,7 @@ class Bank:
         for accounts in self.accounts:
             print(f"{accounts.fname} {accounts.mname} {accounts.lname}")
 
-    # def transferFunds(self, account, amount)
+    def transferFunds(self, account, amount):
     
 def main():
     Big_Boy_Banking = Bank("Big Boy Banking LLC", "69420 Road St.")
@@ -37,6 +37,7 @@ def main():
         print(f"""What would you like to do at your friendly neighborhood {Big_Boy_Banking.name}?""")
         print("1. Create an account")
         print(f"2. Show a list of all {Big_Boy_Banking.name} account holders. ")
+        print{f"3. Transfer funds. "}
         print("6. Exit Big Boy Banking.")
 
         action = int(input(">>>"))
@@ -52,6 +53,9 @@ def main():
 
         elif (action == 2):
             Big_Boy_Banking.showMembers()
+
+        elif (action == 3):
+            Big_Boy_Banking.transferFunds()
 
         if (action == 6):
             print("See you soon. We'll miss you dearly while you're away...")
